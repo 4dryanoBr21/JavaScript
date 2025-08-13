@@ -7,9 +7,17 @@
 </head>
 <body>
     <script>
-        function par_impar(){
-            
+        function par_impar(num){
+            if (num %2 == 0){
+                return "Este valor é par!"
+            }
+            else{
+                return "Este valor não tem um par! hahaha"
+            }
         }
+
+        var valor = parseFloat(prompt("Digite um valor: "))
+        console.log(par_impar(valor))
     </script>
 </body>
 </html>
