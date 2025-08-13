@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function calcularIdadeNoFuturo(nome, idade_atual, idade_no_futuro) {
+            var futuro = idade_atual + idade_no_futuro
+            var nome_real = nome
+            return nome_real + " terá " + futuro + " anos de idade daqui á " + anos + " anos!"
+        }
+
+        var nome_pessoa = prompt("Digite seu nome: ")
+        var idade = parseInt(prompt("Digite sua idade atual: "))
+        var anos = parseInt(prompt("Digite quantos anos quer estar a frente do futuro: "))
+        console.log(calcularIdadeNoFuturo(nome_pessoa, idade, anos))
+    </script>
+</body>
+
+</html>
