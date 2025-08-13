@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function tradutor(giria){
+            giria = giria.replace("negocio", "trem")
+            giria = giria.replace("esta", "ta")
+            giria = giria.replace("bem", "bão")
+            traducao = giria.replace("você", "cê")
+            return traducao
+        }
+
+        var frase = prompt("Digite uma frase: ")
+        console.log(tradutor(frase))
+    </script>
+</body>
+</html>
