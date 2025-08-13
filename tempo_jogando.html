@@ -8,15 +8,16 @@
 <body>
     <script>
         function  tempo_total(nome, horas, minutos){
+            var sujeito = nome
             var minutos_total = (horas * 60) + minutos
-            return `${nome} jogou por ${minutos_total} minutos!` //algum problema por aqui
+            return `${sujeito} jogou por ${minutos_total} minutos!` //algum problema por aqui
 
         }
 
-        var nome = prompt("Qual o nome do menino arteiro?: ")
-        var horas_jogadas = parseInt(prompt("Quantas horas o " + nome + " Jogou?: "))
-        var minutos_jogados = parseInt(prompt("Quantos minutos o " + nome +" Jogou?"))
-        console.log(tempo_total(nome,horas_jogadas,minutos_jogados))
+        var nome_menino = prompt("Qual o nome do menino arteiro?: ")
+        var horas_jogadas = parseInt(prompt("Quantas horas o " + nome_menino + " Jogou?: "))
+        var minutos_jogados = parseInt(prompt("Quantos minutos o " + nome_menino +" Jogou?"))
+        console.log(tempo_total(nome_menino,horas_jogadas,minutos_jogados))
     </script>
 </body>
 </html>
