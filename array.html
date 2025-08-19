@@ -9,7 +9,6 @@
 
 <body>
     <script>
-        // Função que soma todos os elementos de um array
         function somarArray(array) {
             let soma = 0;
             for (let i = 0; i < array.length; i++) {
@@ -18,14 +17,12 @@
             return soma;
         }
 
-        // Solicitar 4 números ao usuário
         let numeros = [];
         for (let i = 1; i <= 4; i++) {
             let num = Number(prompt("Digite o número " + i + ":"));
             numeros.push(num);
         }
 
-        // Chamar a função e mostrar o resultado
         let resultado = somarArray(numeros);
         alert("A soma dos números é: " + resultado);
 

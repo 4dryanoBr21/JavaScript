@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function desenharRetangulo(linhas, colunas) {
+            let retangulo = "";
+
+            for (let i = 0; i < linhas; i++) {
+                let linha = "";
+                for (let j = 0; j < colunas; j++) {
+                    if ((i === 0 || i === linhas - 1) && (j === 0 || j === colunas - 1)) {
+                        linha += "+";
+                    } else if (i === 0 || i === linhas - 1) {
+                        linha += "-";
+                    } else if (j === 0 || j === colunas - 1) {
+                        linha += "|";
+                    } else {
+                        linha += " ";
+                    }
+                }
+                retangulo += linha + "\n";
+            }
+
+            console.log(retangulo);
+        }
+
+        let linhas = parseInt(prompt("Digite o número de linhas:"));
+        let colunas = parseInt(prompt("Digite o número de colunas:"));
+
+        desenharRetangulo(linhas, colunas);
+
+    </script>
+</body>
+
+</html>

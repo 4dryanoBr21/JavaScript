@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function estaVazio(array) {
+            return array.length === 0;
+        }
+
+        function maiorValor(array) {
+            if (array.length === 0) return -1;
+            let maior = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] > maior) {
+                    maior = array[i];
+                }
+            }
+            return maior;
+        }
+
+        function menorValor(array) {
+            if (array.length === 0) return -1;
+            let menor = array[0];
+            for (let i = 1; i < array.length; i++) {
+                if (array[i] < menor) {
+                    menor = array[i];
+                }
+            }
+            return menor;
+        }
+
+        function valorMedio(array) {
+            if (array.length === 0) return -1;
+            let soma = 0;
+            for (let i = 0; i < array.length; i++) {
+                soma += array[i];
+            }
+            return soma / array.length;
+        }
+
+        let array1 = [];
+        let array2 = [10, 5, 8, 22, 3];
+
+        console.log("Array vazio:", estaVazio(array1));
+        console.log("Maior valor:", maiorValor(array2));
+        console.log("Menor valor:", menorValor(array2));
+        console.log("Média:", valorMedio(array2));
+
+    </script>
+</body>
+
+</html>

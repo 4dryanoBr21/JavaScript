@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Função que converte 24h para 12h
+        function converterHora(hora24) {
+            let [hora, minuto] = hora24.split(":").map(Number);
+            let sufixo = hora >= 12 ? "P.M." : "A.M.";
+
+            hora = hora % 12;
+            if (hora === 0) hora = 12;
+
+            return hora + ":" + minuto.toString().padStart(2, "0") + " " + sufixo;
+        }
+
+        // Programa principal (com loop)
+        let continuar = true;
+
+        while (continuar) {
+            let hora = prompt("Digite a hora no formato 24h (ex: 15:30):");
+            alert("Formato 12h: " + converterHora(hora));
+
+            continuar = confirm("Deseja converter outra hora?");
+        }
+
+    </script>
+</body>
+
+</html>

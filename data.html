@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function dataPorExtenso(data) {
+            const meses = [
+                "janeiro", "fevereiro", "março", "abril", "maio", "junho",
+                "julho", "agosto", "setembro", "outubro", "novembro", "dezembro"
+            ];
+
+            let [dia, mes, ano] = data.split("/").map(Number);
+
+            return dia + " de " + meses[mes - 1] + " de " + ano;
+        }
+
+        let data = prompt("Digite uma data no formato DD/MM/AAAA:");
+        alert("Data por extenso: " + dataPorExtenso(data));
+
+    </script>
+</body>
+
+</html>
