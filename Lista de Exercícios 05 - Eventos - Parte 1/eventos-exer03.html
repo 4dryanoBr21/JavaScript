@@ -19,7 +19,15 @@
         <button id="botao" type="submit">Somar</button>
     </div>
     <script>
-        // implemente aqui o script
+        function soma() {
+            let valor1 = parseFloat(document.getElementById("n1").value)
+            let valor2 = parseFloat(document.getElementById("n2").value)
+            let resultado = document.getElementById("result")
+            resultado.value = valor1 + valor2
+        }
+
+        var botao = document.getElementById("botao")
+        botao.addEventListener("click", mult)
     </script>
 </body>
 

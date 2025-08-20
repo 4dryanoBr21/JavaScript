@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Origem e Destino</title>
+    <link href="eventos.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="form-container">
+        <label for="n1">Número 1:</label>
+        <input type="text" id="n1">
+        <label for="n2">Número 2:</label>
+        <input type="text" id="n2">
+        <label for="result">Resultado:</label>
+        <input type="text" id="result">
+        <button id="soma" type="submit">Somar</button>
+        <button id="subtrair" type="submit">Subtrair</button>
+        <button id="dividir" type="submit">Multiplicar</button>
+        <button id="multiplicar" type="submit">Dividir</button>
+    </div>
+    <script>
+            
+        let valor1 = parseFloat(document.getElementById("n1").value)
+        let valor2 = parseFloat(document.getElementById("n2").value)
+        let resultado = document.getElementById("result")
+
+        function soma() {
+            resultado.value = valor1 + valor2
+        }
+
+        function subtrair() {
+            resultado.value = valor1 - valor2
+        }
+
+        function dividir() {
+            resultado.value = valor1 / valor2
+        }
+
+        function multiplicar() {
+            resultado.value = valor1 * valor2
+        }
+
+        var botaoSoma = document.getElementById("soma")
+        botaoSoma.addEventListener("click", soma)
+
+        var botaoSubtrair = document.getElementById("subtrair")
+        botaoSubtrair.addEventListener("click", subtrair)
+
+        var botaoDividir = document.getElementById("dividir")
+        botaoDividir.addEventListener("click", dividir)
+
+        var botaoMultiplicar = document.getElementById("multiplicar")
+        botaoMultiplicar.addEventListener("click", multiplicar)
+
+    </script>
+</body>
+
+</html>
