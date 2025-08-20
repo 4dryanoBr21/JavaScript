@@ -18,28 +18,37 @@
         <input type="text" id="result">
         <button id="soma" type="submit">Somar</button>
         <button id="subtrair" type="submit">Subtrair</button>
-        <button id="dividir" type="submit">Multiplicar</button>
-        <button id="multiplicar" type="submit">Dividir</button>
+        <button id="multiplicar" type="submit">Multiplicar</button>
+        <button id="dividir" type="submit">Dividir</button>
     </div>
     <script>
-            
-        let valor1 = parseFloat(document.getElementById("n1").value)
-        let valor2 = parseFloat(document.getElementById("n2").value)
-        let resultado = document.getElementById("result")
+
+        var resultado = document.getElementById('result')
+        var valor1;
+        var valor2; 
+
+        function atualizaVars() {
+            valor1 = parseFloat(document.getElementById('n1').value)
+            valor2 = parseFloat(document.getElementById('n2').value)            
+        }
 
         function soma() {
+            atualizaVars()
             resultado.value = valor1 + valor2
         }
 
         function subtrair() {
+            atualizaVars()
             resultado.value = valor1 - valor2
         }
 
         function dividir() {
+            atualizaVars()
             resultado.value = valor1 / valor2
         }
 
         function multiplicar() {
+            atualizaVars()
             resultado.value = valor1 * valor2
         }
 
