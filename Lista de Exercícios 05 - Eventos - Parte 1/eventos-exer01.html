@@ -19,7 +19,14 @@
 </body>
 
 <script>
-    
+    function copiar() {
+        let nome = document.getElementById("origem")
+        let resultado = document.getElementById("destino")
+        resultado.value = `${nome.value}`
+    }
+
+    var botao = document.getElementById("copiar")
+    botao.addEventListener("click", copiar)
 </script>
 
 </html>

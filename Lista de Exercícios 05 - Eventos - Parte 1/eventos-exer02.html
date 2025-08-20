@@ -22,4 +22,15 @@
     </div>
 </body>
 
+<script>
+    function mult() {
+        let valor = parseFloat(document.getElementById("numero"))
+        let resultado = parseFloat(document.getElementById("resultado"))
+        resultado.value = valor * 2
+    }
+
+    var botao = document.getElementById("botao")
+    botao.addEventListener("click", mult)
+</script>
+
 </html>
