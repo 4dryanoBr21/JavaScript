@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="botao">
+        Quem clicar será amaldiçoado!
+    </button>
+    <script>
+        function aviso() {
+            alert("Seu PC foi hackeado!")
+        }
+
+        var botao = document.getElementById("botao")
+        botao.addEventListener("click", aviso)
+    </script>
+</body>
+</html>
