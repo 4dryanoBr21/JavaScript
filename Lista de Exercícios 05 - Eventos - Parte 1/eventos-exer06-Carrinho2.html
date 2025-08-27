@@ -114,10 +114,7 @@
 </body>
 
 <script>
-    //document.getElementById("calcular").addEventListener("click", multiplicar) ## GERADO PELO CHATGPT! ##
-
     function multiplicar() {
-
         let qtd1 = parseInt(document.getElementById("qtd1").value) || 0
         let qtd1_total = qtd1 * 10
 
@@ -127,17 +124,27 @@
         let qtd3 = parseInt(document.getElementById("qtd3").value) || 0
         let qtd3_total = qtd3 * 15
 
-        let total_qtd = qtd1_total + qtd2_total + qtd3_total
+        let frete_cep = document.getElementById("cep").value
+        let frete = 0
 
-        document.getElementById("total").textContent = total_qtd.toFixed(2) //## GERADO PELO CHATGPT! ##
+        if (frete_cep === "88780000") {
+            frete = 10
+        }
+        else if (frete_cep === "88490000") {
+            frete = 15
+        }
+        else if (frete_cep === "88495000") {
+            frete = 20
+        }
 
+        let total_qtd = qtd1_total + qtd2_total + qtd3_total + frete
+
+        document.getElementById("frete").textContent = frete.toFixed(2)
+        document.getElementById("total").textContent = total_qtd.toFixed(2)
     }
 
-    var calcular = document.getElementById("calcular");
-    calcular.addEventListener("click", multiplicar);
-
-    //var total = document.getElementById("total")
-    //total.innerHTML = addEventListener("click", multiplicar)
+    document.getElementById("calcular").addEventListener("click", multiplicar)
 </script>
+
 
 </html>
