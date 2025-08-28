@@ -34,13 +34,30 @@
         alert("Você Venceu!")
     }
 
-    function troca_btn1(){
-        btn1.innerHTML = "test"
+    function troca_btn1_perde(){
+        btn1.innerHTML = "Clique aqui para PERDER!"
+    }
+
+    function troca_btn1_vence(){
+        btn1.innerHTML = "Clique aqui para VENCER!"
+    }
+
+    function troca_btn2_perde(){
+        btn2.innerHTML = "Clique aqui para PERDER!"
+    }
+
+    function troca_btn2_vence(){
+        btn2.innerHTML = "Clique aqui para VENCER!"
     }
 
     btn1.addEventListener("click", perdeu)
-    btn1.addEventListener("mouseover", troca_btn1)
+    btn1.addEventListener("mouseover", troca_btn1_perde)
+    btn1.addEventListener("mouseout", troca_btn1_vence)
+
     btn2.addEventListener("click", perdeu)
+    btn2.addEventListener("mouseover", troca_btn2_vence)
+    btn2.addEventListener("mouseout", troca_btn2_perde)
+
     document.addEventListener("keypress", (event) => {
         if(event.key === "Enter"){
             venceu()
